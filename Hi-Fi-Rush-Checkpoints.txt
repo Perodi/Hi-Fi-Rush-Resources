@@ -1,0 +1,329 @@
+Level Names     :   Map Names
+------------------------------------------
+                :   HideOut_Main
+TR01            :   St01_All
+TR02            :   St02_All
+TR03            :   St03_All
+TR04            :   St04_All
+TR05            :   St05a_All
+TR06            :   St05b_All
+TR07            :   St06_All
+TR08            :   St07_All
+TR09            :   St08_All
+TR10            :   St10_All
+TR11            :   St11_All
+TR12            :   St12_All
+
+----------Checkpoints----------
+
+-1  :   No checkpoint (menus and loading)
+
+--Track 01--
+100 :   Start of Track 1 when you gain control of Chai
+101 :   TR01_CR01 start (FIGHT!)
+102 :   Combat tutorial
+103 :   TR01_CR02 start (FIGHT!)
+104 :   TR01_CR02 end
+105 :   Hitting the valve before TR01_CR03
+106 :   TR01_CR03 start cutscene
+107 :   TR01_CR03 after end of Peppermint switch dialogue
+108 :   Beat hit tutorial
+109 :   End of beat hit tutorial
+110 :   Approaching Combo Switch before TR01_CR04
+111 :   TR01_CR04 end after tutorial message
+112 :   Start of 2D section
+113 :   Room before laser section
+114 :   Breaking the glass with Power Chord
+115 :   TR01_CR05 start (FIGHT!)
+116 :   TR01_CR05 end
+117 :   Entering factory
+118 :   After factory near arguing robots
+119 :   TR01_CR06 trigger
+120 :   TR01_CR06 end after tutorial message
+121 :   TR01_CR07 on platform before fight
+122 :   TR01_CR07 end
+123 :   TR01_CR08 [QA-1MIL] start (FIGHT!)
+124 :   QA-1MIL phase 2
+125 :   QA-1MIL phase 3 (Serious Mode)
+
+125 --SPLIT--> -1
+Not in Chorus
+Don't include TR01_CR08 in Chorus Splits
+
+--Track 02--
+200 :   Start of Track 2
+201 :   TR02_CR01 start trigger
+202 :   TR02_CR01 end
+203 :   Enter first large room
+204 :   Enter second large room
+205 :   TR02_CR02 start trigger
+206 :   TR02_CR02 end
+207 :   Smidge room after circle platforms 
+208 :   TR02_CR03 start trigger
+209 :   TR02_CR03 end
+210 :   Upgrade board
+211 :   TR02_CR04 start (FIGHT!)
+212 :   TR02_CR04 end
+213 :   TR02_CR05 start (FIGHT!)
+214 :   TR02_CR05 end
+215 :   Jump panel before TR02_CR06
+216 :   TR02_CR06 end
+217 :   Zipline start
+218 :   Zipline end
+219 :   Enter room with SHOOT!! buttons
+220 :   TR02_CR07 start trigger
+221 :   TR02_CR07 end
+222 :   TR02_CR08 start (FIGHT!)
+223 :   TR02_CR08 end
+224 :   Valve in room with climb
+225 :   After climb (Teamwork!)
+226 :   TR02_CR09 start trigger
+227 :   TR02_CR09 end
+228 :   TR02_CR10 [Rekka] start trigger
+229 :   Rekka phase 2 (Juice)
+230 :   Rekka Pipe Dodging
+231 :   Rekka phase 3
+
+231 --SPLIT--> -1
+Not in Chorus
+Don't include TR02_CR10 in chorus splits
+
+--Track 03--
+300 :   Ledge at end of first room ("They've been planning...")
+301 :   TR03_CR01 start after "Hey, you!"
+302 :   TR03_CR01 end
+303 :   Great view before TR03_CR02
+304 :   TR03_CR02 end
+305 :   Volcano section
+306 :   Bytez Rock zipline before TR03_CR03
+307 :   TR03_CR03 end
+308 :   TR03_CR04 start trigger
+309 :   TR03_CR04 end
+310 :   Are & D entrance
+311 :   End of LU-C1LLE dialogue
+312 :   Enter Lab 44
+313 :   Test Room 1 start
+314 :   Test Room 1 end
+315 :   Test Room 2 start
+316 :   Test Room 2 end
+317 :   TR03_CR05 start trigger
+318 :   TR03_CR05 exit
+319 :   End of zipline before TR03_CR06
+320 :   End of TR03_CR06
+
+320 --SPLIT--> -1
+In Chorus TR03_CR07
+Don't include TR03_CR07 in chorus splits
+
+--Track 04--
+400 :   Enter lava room with drill thing
+401 :   Top of drill after zipline
+402 :   Door before TR04_CR01
+403 :   TR04_CR01 end
+404 :   TR04_CR02 start trigger (VÄRRT 1)
+405 :   VÄRRT 1 exit
+406 :   TR04_CR03 start trigger (VÄRRT 2)
+407 :   VÄRRT 2 exit
+408 :   VÄRRT 3 start
+409 :   TR04_CR04 start trigger
+410 :   TR04_CR04 end
+411 :   Zipline before TR04_CR05
+412 :   VÄRRT 3 destroyed into defunding cutscene
+413 :   Start of escape sequence
+414 :   ??? Skipped ???
+415 :   TR04_CR06 end
+416 :   TR04_CR07 start trigger (left uncompleted)
+417 :   Zipline out of TR04_CR07 (still in chorus)
+418 :   Trapdoor fall
+
+418 --SPLIT--> -1
+Maybe in chorus TR04_CR07 maybe not?
+Don't include TR04_CR07 in Chorus splits
+
+--Track 05--
+500 :   Start of Track 5 after moving Chai
+501 :   Laser drone hallway
+502 :   First main hub entrance
+503 :   TR05_CR01 when entering Node 2 room
+504 :   TR05_CR01 end
+505 :   Data Node 2 completed
+506 :   Re-enter main hub
+507 :   TR05_CR04 top of stair section on the way to Node 1
+508 :   TR05_CR04 end after crossing bridge
+509 :   TR05_CR05 on bridge before chorus
+510 :   TR05_CR05 end
+511 :   Node 1 completed
+512 :   Start of 2D vent section
+513 :   End of 2D section falling out of vent
+514 :   TR05_CR02 start
+515 :   TR05_CR02 end
+516 :   Enter Node 3 room
+517 :   Node 3 completed
+518 :   TR05_CR03 start trigger
+519 :   TR05_CR03 end
+520 :   After final TEC-78 dialogue
+521 :   TR05_CR06 start of elevator section
+
+521 --SPLIT--> -1
+Not in Chorus
+Don't include TR05_CR06 in chorus splits
+
+--Track 06--
+600 :   ??? Skipped ???
+601 :   Start of L.I.F.T. (TR06_CR01)
+602 :   Start of construction 1
+603 :   TR06_CR02 start trigger
+604 :   Start of construction 2
+605 :   TR06_CR03 start trigger
+
+605 --SPLIT--> -1
+Not in Chorus
+Don't include TR06_CR03
+
+--Track 07--
+700 :   TR07_CR01 start (FIGHT!)
+701 :   TR07_CR01 end
+702 :   After mission report
+703 :   TR07_CR02 start trigger
+704 :   TR07_CR02 end
+705 :   Start of first tower room
+706 :   TR07_CR03 start trigger
+707 :   TR07_CR03 end
+708 :   Top of first 2D section (Healthy alternative)
+709 :   TR07_CR04 start trigger
+710 :   TR07_CR04 end
+711 :   Peppermint security node
+712 :   Start of second 2D section
+713 :   Top of second 2D section
+714 :   TR07_CR05 start trigger
+715 :   TR07_CR05 end
+716 :   Hooks after TR07_CR05 ("Plan time")
+717 :   TR07_CR06 before entering door
+718 :   TR07_CR06 end
+719 :   Hooks after TR07_CR06 before second tower room
+720 :   Start of second tower room
+721 :   TR07_CR07 jump pad into chorus
+722 :   TR07_CR07 end
+723 :   Hook into fake 2D section with lamp skip
+724 :   TR07_CR08 start trigger
+725 :   TR07_CR08 end
+726 :   Top of the last tower jump pad
+727 :   TR07_CR09 start trigger
+728 :   TR07_CR09 end
+729 :   TR07_CR10 start [Korsica]
+730 :   After first Korsica attack
+731 :   ??? Skipped ???
+732 :   First knock back (CatJAM)
+733 :   "Way to go Chai" (really short)
+734 :   Red background transition
+735 :   "Floating cat?"
+736 :   ??? Skipped ???
+737 :   Now she's mad
+738 :   Why does Korsica have so many checkpoints?
+
+738 --SPLIT--> -1
+Not in Chorus
+Don't include TR07_CR10
+
+--Track 08--
+800 :   Start of Track after dialogue
+801 :   Top of magnet climbing section teleport
+802 :   TR08_CR01 start after tutorial
+803 :   TR08_CR01 end
+804 :   Enter museum
+805 :   TR08_CR02 start trigger
+806 :   TR08_CR02 end
+807 :   End of first museum cutscene
+808 :   TR08_CR03 right before trigger
+809 :   TR08_CR03 end
+810 :   End of second museum cutscene into TR08_CR04
+811 :   TR08_CR04 end
+812 :   After falling out of vent into hallway
+813 :   TR08_CR05 start trigger
+814 :   TR08_CR05 end
+815 :   Power supply room
+816 :   End of first generator section in power supply room
+817 :   TR08_CR06 start trigger
+818 :   TR08_CR06 end
+819 :   Start of catwalk exhibit room
+820 :   TR08_CR07 start trigger
+821 :   TR08_CR07 end
+822 :   TR08_CR08 start trigger
+823 :   TR08_CR08 end
+824 :   End of third musum cutscene
+825 :   Before generator section
+826 :   TR08_CR09 start trigger after dialogue
+827 :   TR08_CR09 end
+
+827 --SPLIT--> -1
+Not in Chorus
+Don't include TR08_CR09
+
+--Track 09--
+900 :   Shark 1
+901 :   Shark 2
+902 :   TR09_CR01 [Mimosa] start (FIGHT!)
+903 :   Mimosa Phase 2
+904 :   Mimosa DDR
+905 :   Mimosa Phase 3
+
+905 --SPLIT--> -1
+Not in Chorus
+Don't include TR09_CR01
+
+--Track 10--
+1000:   Start of track when you gain control (TR10_CR01)
+1001:   TR10_CR01 end 
+1002:   TR10_CR02 end
+1003:   TR10_CR03 start
+1004:   TR10_CR03 end
+1005:   TR10_CR04 start trigger
+1006:   TR10_CR05 start (FIGHT!)
+1007:   TR10_CR05 end
+1008:   Korsica generator (TR10_CR06)
+1009:   TR10_CR06 end
+1010:   Enter atrium
+1011:   TR10_CR07 start trigger
+1012:   TR10_CR07 end
+1013:   TR10_CR08 end
+1014:   After zipline (He's an adult)
+1015:   Start of next zipline after offices (TR10_CR09)
+1016:   TR10_CR09 end
+1017:   Before entering finance
+1018:   TR10_CR10 [Roquefort] start trigger
+1019:   Roquefort Phase 2
+1020:   Roquefort Annoying Laser Phase
+1021:   Roquefort Scrooge McDuck Phase
+
+1021 --SPLIT--> -1
+Not in Chorus
+Don't include TR10_CR10 in Chorus splits
+
+--Track 11--
+1100:   Start of 2:05 unskippable cutscene
+1101:   Gain control after cutscene
+1102:   Magnet hook into TR11_CR01
+1103:   TR11_CR01 end
+1104:   After CNMN's help
+1105:   After Korsica's shortcut
+1106:   TR11_CR02 start trigger from zipline
+1107:   TR11_CR02 end
+1108:   Magnets before laser tunnel
+1109:   After CNMN's helpful hacked screen
+1110:   Korisca and Peppermint distraction before 2D section
+1111:   End of 2D section
+1112:   TR11_CR03 start trigger ("I think it lost me")
+1113:   TR11_CR03 end
+1114:   Right before arm where Any% goes
+1115:   You can now play as CNMN
+
+1115 --SPLIT--> -1
+Not in Chorus
+
+--Track 12--
+1200:   TR12_CR01 [Kale] start (FIGHT!) a.k.a. You can now play as 808
+1201:   Start of Kale proper
+1202:   Kale RNG
+1203:   Kale Final Lightning Phase
+
+Maybe final split on chorus completion
