@@ -1,6 +1,6 @@
 /* 
 ----------------------------
-Hi-Fi Rush Autosplitter v0.1
+Hi-Fi Rush Autosplitter v0.2
 ----------------------------
 Autosplitter by Perodi
 Thanks to Meta, Candle, Vorime, AFSilver, and BoltClock for finding addresses and
@@ -60,11 +60,14 @@ startup {
 
     settings.Add("removeLoads", true, "Enable Load Remover");
 
-    settings.Add("autosplit", true, "Enable Autosplitter");
+    settings.Add("autosplit", true, "Enable Autosplitter - Please select ONLY 1 Preset");
     settings.CurrentDefaultParent = "autosplit";
-    settings.Add("autosplit_track", true, "Autosplit Tracks");
-    settings.SetToolTip("autosplit_track", "Splits when you load into the next track");
-    settings.Add("autosplit_chorus", false, "Autosplit Choruses");
+    settings.Add("autosplit_after_track", true, "After Tracks");
+    settings.SetToolTip("autosplit_after_track", "Splits when you load out of a track into either the next level or the hideout.");
+    settings.Add("autosplit_before_track", false, "Before Tracks");
+    settings.SetToolTip("autosplit_before_track", "Splits when you load into a new track from either the previous level or the hideout.");
+    settings.Add("autosplit_chorus", false, "Choruses and After Tracks");
+    settings.SetToolTip("autosplit_chorus", "Splits whenever you finish a chorus or finish a track.");
 
     settings.CurrentDefaultParent = null;
     settings.Add("debug", false, "Debug Mode");
@@ -72,8 +75,15 @@ startup {
 
     // ----- Variables ----- //
 
+    vars.LAST_CHECKPOINTS = new List<int> {125, 231, 320, 418, 521, 605, 738, 827, 905, 1021, 1115, 1203};
+    vars.EXCLUDE_CHORUSES = new List<string> {"TR01_CR08", "TR02_CR10", "TR03_CR06", "TR03_CR07", "TR04_CR07", "TR05_CR06", "TR06_CR03", "TR07_CR10", "TR08_CR09", "TR09_CR01", "TR10_CR10", "TR12_CR01"};
+
+    // Used in chorus splits
     vars.leftChorus = false;
-    vars.trackSplits = Enumerable.Range(2, 11).ToList();
+    // Used in after track splits
+    vars.lastTrack = 0;
+    // Used in before track splits
+    vars.lastSplitTrack = 1;
 }
 
 init {
@@ -164,8 +174,9 @@ start {
 
 onStart {
     // Reset variables when timer is started
-    vars.trackSplits = Enumerable.Range(2, 11).ToList();
     vars.leftChorus = false;
+    vars.lastTrack = 0;
+    vars.lastSplitTrack = 1;
 }
 
 update {
@@ -202,22 +213,32 @@ split {
         return false;
     }
 
-    // Track autosplitter (After Hideout) - split if you entered the next track in the list.
-    if (settings["autosplit_track"] && (current.track == vars.trackSplits[0])) {
-        vars.trackSplits.RemoveAt(0);
+    // Track autosplitter (Before Track) - split if you entered any track that wasn't the track you were last in.
+    if (settings["autosplit_before_track"] && (current.track != 30) && (current.track != -1) && (current.track != vars.lastSplitTrack)) {
+        vars.lastSplitTrack = current.track;
         return true;
     }
 
-    // Track autosplitter (Enter Hideout) - split when you exit a track into the hideout.
+    // Track autosplitter (After Track) - split when you exit a track while in the last checkpoint and enter into any other track or the hideout.
+    if ((settings["autosplit_after_track"] || settings["autosplit_chorus"]) && (vars.LAST_CHECKPOINTS.Contains(old.checkpoint)) && (current.track == -1)) {
+        // Saves the last track you were in when you leave a level from the last checkpoint
+        vars.lastTrack = old.track;
+    } else if ((vars.lastTrack != 0) && (current.track != -1)) {
+        // If you don't reload and instead go to another track, split.
+        bool split = current.track != vars.lastTrack;
+        vars.lastTrack = 0;
+        return split;
+    }
+
 
     // Chorus autosplitter - split if you leave a chorus and remain in the level
-    if (settings["autosplit_chorus"] && (current.chorus != old.chorus) && (current.chorus == null)) {
+    if (settings["autosplit_chorus"] && (current.chorus != old.chorus) && (current.chorus == null) && (!vars.EXCLUDE_CHORUSES.Contains(old.chorus))) {
         // Effectively waits one update, otherwise it will split on reload and death in a chorus
         vars.leftChorus = true;
     }
     if (vars.leftChorus) {
         vars.leftChorus = false;
-        // Return true if chorus was completed, returns false if level was reloaded
+        // Return true if chorus was completed, returns false if level was reloaded or you died.
         return current.checkpoint != -1;
     }
 }
