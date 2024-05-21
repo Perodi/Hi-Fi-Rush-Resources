@@ -54,6 +54,10 @@ state("Hi-Fi-RUSH", "Update 8 (Steam)") {
     int checkpoint : 0x728D6C8, 0x8, 0x240, 0x220;
     string18 chorus : 0x728D6C8, 0x8, 0x240, 0x250, 0x0;
 }
+state("Hi-Fi-RUSH", "Update 9 (Steam)") {
+    bool isLoading : 0x728CA80;
+    // TODO: Find addresses for autosplitter
+}
 
 startup {
     // ----- Settings ----- //
@@ -146,6 +150,11 @@ init {
             break;
         case 0x188C8000:
             version = "Update 8 (Steam)";
+            vars.hasLoadRemover = true;
+            vars.hasAutospliter = true;
+            break;
+        case 0x189FF000:
+            version = "Update 9 (Steam)";
             vars.hasLoadRemover = true;
             vars.hasAutospliter = true;
             break;
